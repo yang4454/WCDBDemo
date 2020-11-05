@@ -14,8 +14,8 @@
             filePath = "WCDBDemo/ViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "-chaxun:"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "WCDBDemo/ViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-WINQ:"
             landmarkType = "7">
          </BreakpointContent>
@@ -49,6 +49,22 @@
             startingLineNumber = "56"
             endingLineNumber = "56"
             landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25B156C8-0341-42CC-949A-36D477F19703"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WCDBDemo/ViewController.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-AutoIncrement:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

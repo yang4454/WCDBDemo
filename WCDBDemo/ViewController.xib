@@ -66,6 +66,14 @@
                         <action selector="WINQ:" destination="-1" eventType="touchUpInside" id="zhW-7g-dvo"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69R-Pq-KI9">
+                    <rect key="frame" x="149" y="204" width="193" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="主键⾃自增(Auto Increment)"/>
+                    <connections>
+                        <action selector="AutoIncrement:" destination="-1" eventType="touchUpInside" id="R3x-N9-raY"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

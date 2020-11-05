@@ -120,6 +120,13 @@
    [transaction rollback]; NSLog(@"%@", [transaction error]); }
 }
 
+- (IBAction)AutoIncrement:(id)sender {
+    Message *object = [[Message alloc] init];
+    object.isAutoIncrement = YES;
+   object.content = @"Insert auto increment";
+   [self.database insertObject:object into:@"message"];
+   long long lastInsertedRowID = object.lastInsertedRowID;
+}
 
 #pragma mark ———查询
 - (IBAction)chaxun:(id)sender {
@@ -219,5 +226,37 @@
 - (IBAction)shanchu:(id)sender {
     [self.database deleteObjectsFromTable:@"message" where:Message.localID > 0];
 }
-
+//插⼊入
+//   insertObject:into: 和 insertObjects:into: ，插⼊入单个或多个对象
+//insertOrReplaceObject:into 和 insertOrReplaceObjects:into ，插⼊入单个或多个对象。 当对象的主键在数据库内已经存在时，更更新数据;否则插⼊入对象。
+//insertObject:onProperties:into: 和 insertObjects:onProperties:into: ，插⼊入单个或 多个对象的部分属性
+//insertOrReplaceObject:onProperties:into 和
+//insertOrReplaceObjects:onProperties:into ，插⼊入单个或多个对象的部分属性。当对象的 主键在数据库内已经存在时，更更新数据;否则插⼊入对象。
+//        删除
+//更更新
+//deleteAllObjectsFromTable: 删除表内的所有数据
+//deleteObjectsFromTable: 后可组合接 where 、 orderBy 、 limit 、 offset 以删除部分数据
+//      updateAllRowsInTable:onProperties:withObject: ，通过object更更新数据库中所有指定列列 的数据
+//updateRowsInTable:onProperties:withObject: 后可组合接
+//where 、 orderBy 、 limit 、 offset 以通过object更更新指定列列的部分数据 updateAllRowsInTable:onProperty:withObject: ，通过object更更新数据库某⼀一列列的数据 updateRowsInTable:onProperty:withObject: 后可组合接
+//where 、 orderBy 、 limit 、 offset 以通过object更更新某⼀一列列的部分数据 updateAllRowsInTable:onProperties:withRow: ，通过数组更更新数据库中的所有指定列列的数
+//据
+//updateRowsInTable:onProperties:withRow: 后可组合接
+//where 、 orderBy 、 limit 、 offset 以通过数组更更新指定列列的部分数据 updateAllRowsInTable:onProperty:withRow: ，通过数组更更新数据库某⼀一列列的数据
+//
+//updateRowsInTable:onProperty:withRow: 后可组合接
+//where 、 orderBy 、 limit 、 offset 以通过数组更更新某⼀一列列的部分数
+//查找
+//     getOneObjectOfClass:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库 中取出⼀一⾏行行数据并组合成object
+//getOneObjectOnResults:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据 库中取出⼀一⾏行行数据的部分列列并组合成object
+//getOneRowOnResults:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库 中取出⼀一⾏行行数据的部分列列并组合成数组
+//getOneColumnOnResult:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据 库中取出⼀一列列数据并组合成数组
+//getOneDistinctColumnOnResult:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库中取出⼀一列列数据，并取distinct后组合成数组。
+//getOneValueOnResult:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库 中取出⼀一⾏行行数据的某⼀一列列
+//getAllObjectsOfClass:fromTable: ，取出所有数据，并组合成object
+//getObjectsOfClass:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库中 取出⼀一部分数据，并组合成object
+//getAllObjectsOnResults:fromTable: ，取出所有数据的指定列列，并组合成object
+//getObjectsOnResults:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库 中取出⼀一部分数据的指定列列，并组合成object
+//getAllRowsOnResults:fromTable: ，取出所有数据的指定列列，并组合成数组
+//getRowsOnResults:fromTable: 后可接 where 、 orderBy 、 limit 、 offset 以从数据库中取 出⼀一部分数据的指定列列，并组合成数组
 @end
