@@ -120,12 +120,28 @@
    [transaction rollback]; NSLog(@"%@", [transaction error]); }
 }
 
+#pragma mark ——— 主键⾃自增
 - (IBAction)AutoIncrement:(id)sender {
     Message *object = [[Message alloc] init];
     object.isAutoIncrement = YES;
    object.content = @"Insert auto increment";
    [self.database insertObject:object into:@"message"];
    long long lastInsertedRowID = object.lastInsertedRowID;
+    
+
+}
+#pragma mark ——— as重定向
+- (IBAction)asORM:(id)sender {
+
+    //    这段代码从数据库中取出了了消息的最新的修改时间，并以此将此时间作为消息的创建时间，新建了了⼀一个 message。这种情况下，就可以使⽤用as重定向。
+    //    as重定向，它可以将⼀一个查询结果重定向到某⼀一个字段，如下:
+       Message *message = [self.database getOneObjectOnResults:Message.modifiedTime.max().as(Message.createTime) fromTable:@"message"];
+}
+#pragma mark ——— 多表查询
+- (IBAction)MultiSelect:(id)sender {
+    
+   
+    
 }
 
 #pragma mark ———查询

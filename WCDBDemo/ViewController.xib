@@ -74,6 +74,22 @@
                         <action selector="AutoIncrement:" destination="-1" eventType="touchUpInside" id="R3x-N9-raY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYW-DK-e44">
+                    <rect key="frame" x="152" y="254" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="as重定向"/>
+                    <connections>
+                        <action selector="asORM:" destination="-1" eventType="touchUpInside" id="LJ7-6d-M5C"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-VM-wVy">
+                    <rect key="frame" x="30" y="305" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="多表查询"/>
+                    <connections>
+                        <action selector="MultiSelect:" destination="-1" eventType="touchUpInside" id="Vm7-tq-0YU"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
