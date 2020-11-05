@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property int localID;
 @property(retain) NSString *content;
+@property(retain) NSString *XXSXS;//增加字段
+//@property(retain) NSString *contentxxx;//修改字段删除content;
 @property(retain) NSDate *createTime;
 @property(retain) NSDate *modifiedTime;
 @property(assign) int unused; //You can only define the properties you need'

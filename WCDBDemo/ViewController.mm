@@ -40,7 +40,9 @@
            
            if ([self.database isTableExists:tableName]) {
                
-               NSLog(@"表已经存在");
+               NSLog(@"表已经存在,增加字段");
+               [self.database createTableAndIndexesOfName:tableName withClass:Message.class];
+               
                
            }else {
              [self.database createTableAndIndexesOfName:tableName withClass:Message.class];
@@ -74,13 +76,17 @@
     
 //    开发者需要在数据库未损坏时，对数据库元信息定时进⾏行行备份
    NSData *backupPassword = [@"MyBackupPassword" dataUsingEncoding:NSASCIIStringEncoding]; [self.database backupWithCipher:backupPassword];
+    
+    
+    
 }
 
 #pragma mark ———插⼊
 - (IBAction)charu:(id)sender {
     Message *message = [[Message alloc] init];
-    message.localID = 2;
+    message.localID = 3;
     message.content = @"Hello, WCDB!";
+//    message.contentxxx = @"修改!";
     message.createTime = [NSDate date];
     message.modifiedTime = [NSDate date];
     /*

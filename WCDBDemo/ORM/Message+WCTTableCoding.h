@@ -16,6 +16,10 @@ WCDB_PROPERTY(localID)
 WCDB_PROPERTY(content)
 WCDB_PROPERTY(createTime)
 WCDB_PROPERTY(modifiedTime)
+
+WCDB_PROPERTY(XXSXS)//增加字段
+//WCDB_PROPERTY(contentxxx)//修改字段
+
 @end
 
 NS_ASSUME_NONNULL_END
