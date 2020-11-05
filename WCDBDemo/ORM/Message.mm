@@ -37,5 +37,5 @@ WCDB_SYNTHESIZE(Message, XXSXS)// Add a new column增加字段
 //由于SQLite不不⽀支持修改字段名称，因此WCDB使⽤用 WCDB_SYNTHESIZE_COLUMN(className, propertyName, columnName) 重新映射宏。
 //对于已经定义的字段 WCDB_SYNTHESIZE(MyClass, myValue) 可以修改 为 WCDB_SYNTHESIZE_COLUMN(MyClass, newMyValue, "myValue") 。
 //对于已经定义的字段类型，可以任意修改为其他类型。但旧数据会使⽤用新类型的解析⽅方式进⾏行行反序列列 化，因此需要确保其兼容性。
-//WCDB_SYNTHESIZE_COLUMN(Message, contentxxx, "content")
+//WCDB_SYNTHESIZE_COLUMN(Message, contentxxx, "content")重新映射。
 @end
